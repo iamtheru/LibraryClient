@@ -1,0 +1,34 @@
+<div class="book-cards-container">
+	<div class="book-card-row" *ngFor="let book of books">
+	  <mat-card class="book-card">
+		<mat-card-header class="header">
+		</mat-card-header>
+		<mat-card-content class="content-container">
+		  <img class="cover" mat-card-image [src]="book.cover" alt="{{ book.title }} cover">
+		  <div>
+			  <div>
+				  <mat-card-title>{{ book.title }}</mat-card-title>
+				  <mat-card-subtitle>by {{ book.author }}</mat-card-subtitle>
+			  </div>
+			  <div class="stats-container">
+				  <p>Rating: {{ book.rating }}</p>
+				  <p>Reviews: {{ book.reviewsNumber }}</p>
+			  </div>
+		  </div>
+		  
+		  <div class="button-container">
+			  <svg (click)="viewBook(book.id)" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				  <rect width="24" height="24" fill="white"/>
+				  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12ZM6.24234 6.34315C9.36653 3.21895 14.4319 3.21895 17.556 6.34315L19.7239 8.511C20.3508 9.13781 20.8909 9.67788 21.2653 10.1685C21.6665 10.6944 21.9703 11.2792 21.9703 12C21.9703 12.7208 21.6665 13.3056 21.2653 13.8315C20.8909 14.3221 20.3508 14.8622 19.7239 15.489L17.556 17.6569C14.4319 20.781 9.36653 20.781 6.24234 17.6569L4.07447 15.489C3.44759 14.8622 2.90746 14.3221 2.5331 13.8315C2.1319 13.3056 1.82812 12.7208 1.82812 12C1.82812 11.2792 2.1319 10.6944 2.5331 10.1685C2.90746 9.67788 3.44759 9.13781 4.07447 8.51101C4.08994 8.49555 4.10545 8.48003 4.12102 8.46447L6.24234 6.34315Z" fill="#323232"/>
+				  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10Z" fill="#323232"/>
+			  </svg>
+  
+			  <svg (click)="editBook(book.id)" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C12 20.4477 12.4477 20 13 20H21C21.5523 20 22 20.4477 22 21C22 21.5523 21.5523 22 21 22H13C12.4477 22 12 21.5523 12 21Z" fill="#323232"/>
+				  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.7736 8.09994C22.3834 6.48381 22.315 4.36152 21.113 3.06183C20.5268 2.4281 19.6926 2.0233 18.7477 2.00098C17.7993 1.97858 16.8167 2.34127 15.91 3.09985C15.8868 3.11925 15.8645 3.13969 15.8432 3.16111L2.87446 16.1816C2.31443 16.7438 2 17.5051 2 18.2987V19.9922C2 21.0937 2.89197 22 4.00383 22H5.68265C6.48037 22 7.24524 21.6823 7.80819 21.1171L20.7736 8.09994ZM17.2071 5.79295C16.8166 5.40243 16.1834 5.40243 15.7929 5.79295C15.4024 6.18348 15.4024 6.81664 15.7929 7.20717L16.7929 8.20717C17.1834 8.59769 17.8166 8.59769 18.2071 8.20717C18.5976 7.81664 18.5976 7.18348 18.2071 6.79295L17.2071 5.79295Z" fill="#323232"/>
+			  </svg>
+		  </div>
+		</mat-card-content>
+	  </mat-card>
+	</div>
+  </div>

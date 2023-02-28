@@ -1,0 +1,10 @@
+<mat-tab-group class="books-container">
+	<mat-tab label="View all" >
+		<app-book-list-item #listItemFirst [tabIndex]="0" (bookSelected)="onBookSelected($event)"></app-book-list-item>
+	</mat-tab>
+	<mat-tab label="Recomended" >
+		<ng-template matTabContent>
+		<app-book-list-item #listItemSecond [tabIndex]="1" (bookSelected)="onBookSelected($event)"></app-book-list-item>
+		</ng-template>
+	</mat-tab>
+</mat-tab-group>
