@@ -1,0 +1,25 @@
+.book-card {
+	width: 600px;
+}
+
+.card-content {
+	display: flex;
+	flex-direction: row;
+}
+
+.left-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 50%;
+	margin-right: 16px;
+}
+
+.right-column {
+	width: 50%;
+}
+
+.file-input {
+	margin-top: 16px;
+}

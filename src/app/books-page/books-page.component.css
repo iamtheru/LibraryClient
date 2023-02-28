@@ -1,0 +1,20 @@
+.page-container {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	margin: 20px auto;
+	height: 100%;
+}
+
+.books-container {
+	flex: 1;
+	overflow-y: auto;
+}
+.dialog-backdrop {
+	background-color: rgba(223, 216, 216, 0.5);
+}
+
+.dialog-panel {
+	border-radius: 4px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
