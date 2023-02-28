@@ -1,0 +1,62 @@
+.cover {
+	display: block;
+	max-width:230px;
+	max-height:200px;
+	width: auto;
+	height: auto;
+}
+
+.modal-container {
+	width: 650px;
+}
+
+.mat-dialog-content {
+	height: 800px;
+}
+
+.cover-container {
+	grid-area: l-side-cover ;
+}
+
+.stats-container {
+	grid-area: l-side-stats;
+}
+
+.stats-container span {
+	padding-right: 10px;
+}
+
+.details-container {
+	max-height: 300px;
+	grid-area: r-side-details;
+}
+
+.about-container {
+	grid-area: r-side-about;
+}
+
+.content-container {
+	grid-area: futter;
+	height: 215px;
+	overflow-y: auto;
+}
+
+.review-container {
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.details-container {
+	display: grid;
+	grid-template-areas: 
+	"l-side-cover l-side-cover r-side-details"
+	"l-side-stats l-side-stats r-side-about"
+	"futter futter futter"
+	;
+}
+
+.dialog-panel {
+	height: 300px;
+}
+
+ 

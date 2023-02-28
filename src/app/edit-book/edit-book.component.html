@@ -1,0 +1,47 @@
+<mat-card class="book-card">
+	<mat-card-header>
+	<mat-card-title>Add Book</mat-card-title>
+	</mat-card-header>
+	<mat-card-content class="card-content">
+		<mat-divider></mat-divider>
+		<form [formGroup]="bookForm" >
+			<div class="form-content">
+				<div class="left-column">
+					<mat-form-field>
+						<mat-label>Title</mat-label>
+						<input matInput formControlName="title" name="title" required>
+					</mat-form-field>
+					<mat-form-field>
+						<mat-label>Genre</mat-label>
+						<input matInput formControlName="genre" name="genre" required>
+					</mat-form-field>
+					<mat-form-field>
+						<mat-label>Author</mat-label>
+						<input matInput placeholder="Author" formControlName="author" name="author" required>
+					</mat-form-field>
+					<mat-form-field>
+						<mat-label>Select a file</mat-label>
+						<input #fileInput type="file" hidden (change)="handleUpload($any($event).target.files)">
+						<input matInput [value]="fileName" readonly>
+						<button mat-button (click)="fileInput.click()">
+						  <mat-icon>attach_file</mat-icon>
+						</button>
+						<button mat-icon-button matSuffix *ngIf="fileName" (click)="clearFile()">
+							<mat-icon>close</mat-icon>
+						</button>
+					  </mat-form-field>
+				</div>
+				<div class="right-column">
+					<mat-form-field class="textarea">
+						<mat-label>Content</mat-label>
+						<textarea matInput formControlName="content" name="content" required rows="5"></textarea>
+					</mat-form-field>
+				</div>
+			</div>
+			<button mat-raised-button color="primary" type="button" (click)="submitForm()">Submit</button>
+			<button mat-raised-button color="primary" type="button" (click)="resetForm()">Reset</button>
+		</form>
+	</mat-card-content>
+	<mat-card-footer>
+	</mat-card-footer>
+</mat-card>
