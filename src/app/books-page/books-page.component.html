@@ -1,0 +1,6 @@
+<div class="page-container">
+	<h1>Library</h1>
+	<app-edit-book #myForm (formSubmit) ="onFormSubmit($event)"> </app-edit-book>
+	<app-book-list class="books-container" #listComponent (bookSelected)="onBookSelected($event)"></app-book-list>
+</div>
+
